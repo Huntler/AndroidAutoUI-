@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/elements/bars">
+        <file>Assets/bar_blue.png</file>
+        <file>Assets/bar_blue_horizontal.png</file>
+        <file>Assets/bar_blue_horizontal_design.png</file>
+    </qresource>
+    <qresource prefix="/backgrounds">
+        <file>Assets/background_n.png</file>
+        <file>Assets/background_music.png</file>
+    </qresource>
+    <qresource prefix="/elements/buttons">
+        <file>Assets/button_auto.png</file>
+        <file>Assets/button_exit.png</file>
+        <file>Assets/button_recent.png</file>
+        <file>Assets/button_settings.png</file>
+        <file>Assets/button_general.png</file>
+        <file>Assets/button_add_new.png</file>
+        <file>Assets/button_connect.png</file>
+        <file>Assets/button_music.png</file>
+        <file>Assets/button_back.png</file>
+        <file>Assets/button_ok.png</file>
+        <file>Assets/button_restore.png</file>
+        <file>Assets/button_save.png</file>
+        <file>Assets/button_wireless.png</file>
+        <file>Assets/button_search.png</file>
+    </qresource>
+    <qresource prefix="/elements/icons">
+        <file>Assets/ico_connect.png</file>
+        <file>Assets/ico_n.png</file>
+    </qresource>
+    <qresource prefix="/elements/buttons/numbers">
+        <file>Assets/number_0.png</file>
+        <file>Assets/number_1.png</file>
+        <file>Assets/number_2.png</file>
+        <file>Assets/number_3.png</file>
+        <file>Assets/number_4.png</file>
+        <file>Assets/number_5.png</file>
+        <file>Assets/number_6.png</file>
+        <file>Assets/number_7.png</file>
+        <file>Assets/number_8.png</file>
+        <file>Assets/number_9.png</file>
+    </qresource>
+</RCC>
