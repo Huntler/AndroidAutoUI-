@@ -18,17 +18,14 @@ SOURCES += main.cpp\
     ui/connectwindow.cpp \
     ui/wirelessconnection.cpp \
     ui/musicwindow.cpp \
-    system/SettingsManager.cpp \
-    system/jsoncpp.cpp
+    system/SettingsManager.cpp
 
 HEADERS  += include/mainwindow.h \
     include/settingswindow.h \
     include/connectwindow.h \
     include/wirelessconnection.h \
     include/musicwindow.h \
-    include/system/SettingsManager.h \
-    include/json/json.h \
-    include/json/json-forwards.h
+    include/system/SettingsManager.h
 
 FORMS    += ui/mainwindow.ui \
     ui/settingswindow.ui \
@@ -40,3 +37,5 @@ OTHER_FILES +=
 
 RESOURCES += \
     images.qrc
+
+QMAKE_CXXFLAGS += -lpthread

@@ -7,6 +7,8 @@
     <qresource prefix="/backgrounds">
         <file>Assets/background_n.png</file>
         <file>Assets/background_music.png</file>
+        <file>Assets/background_music_vinyl.png</file>
+        <file>Assets/background_default_cover.jpg</file>
     </qresource>
     <qresource prefix="/elements/buttons">
         <file>Assets/button_auto.png</file>
@@ -23,6 +25,9 @@
         <file>Assets/button_save.png</file>
         <file>Assets/button_wireless.png</file>
         <file>Assets/button_search.png</file>
+        <file>Assets/button_play_prev.png</file>
+        <file>Assets/button_play_next.png</file>
+        <file>Assets/button_play.png</file>
     </qresource>
     <qresource prefix="/elements/icons">
         <file>Assets/ico_connect.png</file>

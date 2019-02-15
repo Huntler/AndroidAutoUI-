@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(96, 96, 96)</string>
   </property>
-  <widget class="QWidget" name="widget" native="true">
+  <widget class="QWidget" name="bar" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -30,20 +30,7 @@
 background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
    </property>
   </widget>
-  <widget class="QWidget" name="widget_2" native="true">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>350</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-image: url(:/backgrounds/Assets/background_music.png)</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="widget_3" native="true">
+  <widget class="QWidget" name="bottom_black_2" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -51,6 +38,9 @@ background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
      <width>670</width>
      <height>15</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0, 150)</string>
    </property>
   </widget>
   <widget class="QWidget" name="horizontalWidget" native="true">
@@ -69,7 +59,7 @@ background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+    <string notr="true">background-color: rgba(0, 0, 0, 0)</string>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
@@ -95,7 +85,7 @@ background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="dummy_3">
+     <widget class="QPushButton" name="button_prev">
       <property name="minimumSize">
        <size>
         <width>110</width>
@@ -109,7 +99,7 @@ background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+       <string notr="true">border-image: url(:/elements/buttons/Assets/button_play_prev.png)</string>
       </property>
       <property name="text">
        <string/>
@@ -117,7 +107,7 @@ background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="dummy">
+     <widget class="QPushButton" name="button_play">
       <property name="minimumSize">
        <size>
         <width>110</width>
@@ -131,7 +121,7 @@ background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+       <string notr="true">border-image: url(:/elements/buttons/Assets/button_play.png)</string>
       </property>
       <property name="text">
        <string/>
@@ -139,7 +129,7 @@ background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="dummy_2">
+     <widget class="QPushButton" name="button_next">
       <property name="minimumSize">
        <size>
         <width>110</width>
@@ -153,7 +143,7 @@ background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+       <string notr="true">border-image: url(:/elements/buttons/Assets/button_play_next.png)</string>
       </property>
       <property name="text">
        <string/>
@@ -162,10 +152,154 @@ background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
     </item>
    </layout>
   </widget>
-  <zorder>widget_2</zorder>
-  <zorder>widget_3</zorder>
-  <zorder>widget</zorder>
+  <widget class="QWidget" name="bottom_black" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>355</y>
+     <width>800</width>
+     <height>125</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0, 150)</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="bc" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/backgrounds/Assets/background_music_vinyl.png)</string>
+   </property>
+   <widget class="QProgressBar" name="song_progress">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>650</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QProgressBar:horizontal {
+border: 0px;
+border-radius: 5px;
+background: white;
+}
+QProgressBar::chunk:horizontal {
+border-radius: 5px;
+background-color: #008fe9
+}</string>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="song_timer">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>300</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>URW Gothic L</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>00:00</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="image_cover" native="true">
+   <property name="geometry">
+    <rect>
+     <x>84</x>
+     <y>50</y>
+     <width>200</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/backgrounds/Assets/background_default_cover.jpg)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="song_title">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>50</y>
+     <width>470</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>URW Gothic L</family>
+     <pointsize>28</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">padding: 25px;
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0)</string>
+   </property>
+   <property name="text">
+    <string>Songname - Interpret</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="tap_area_tophalf">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>760</width>
+     <height>260</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>bc</zorder>
+  <zorder>bottom_black</zorder>
+  <zorder>bottom_black_2</zorder>
+  <zorder>bar</zorder>
   <zorder>horizontalWidget</zorder>
+  <zorder>song_timer</zorder>
+  <zorder>image_cover</zorder>
+  <zorder>song_title</zorder>
+  <zorder>tap_area_tophalf</zorder>
  </widget>
  <resources/>
  <connections/>
