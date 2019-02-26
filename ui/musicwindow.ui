@@ -249,32 +249,6 @@ color: rgb(255, 255, 255);</string>
     <string notr="true">border-image: url(:/backgrounds/Assets/background_default_cover.jpg)</string>
    </property>
   </widget>
-  <widget class="QLabel" name="song_title">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>50</y>
-     <width>470</width>
-     <height>200</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>URW Gothic L</family>
-     <pointsize>28</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">padding: 25px;
-color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0)</string>
-   </property>
-   <property name="text">
-    <string>Songname - Interpret</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="tap_area_tophalf">
    <property name="geometry">
     <rect>
@@ -291,6 +265,45 @@ background-color: rgba(255, 255, 255, 0)</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="song_title">
+   <property name="geometry">
+    <rect>
+     <x>315</x>
+     <y>50</y>
+     <width>450</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>URW Gothic L</family>
+     <pointsize>32</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <strikeout>false</strikeout>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255)</string>
+   </property>
+   <property name="text">
+    <string>Songname - Interpret</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>bc</zorder>
   <zorder>bottom_black</zorder>
   <zorder>bottom_black_2</zorder>
@@ -298,8 +311,8 @@ background-color: rgba(255, 255, 255, 0)</string>
   <zorder>horizontalWidget</zorder>
   <zorder>song_timer</zorder>
   <zorder>image_cover</zorder>
-  <zorder>song_title</zorder>
   <zorder>tap_area_tophalf</zorder>
+  <zorder>song_title</zorder>
  </widget>
  <resources/>
  <connections/>

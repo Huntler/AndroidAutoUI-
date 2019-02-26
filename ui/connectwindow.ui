@@ -19,8 +19,8 @@
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>60</y>
+     <x>275</x>
+     <y>50</y>
      <width>250</width>
      <height>250</height>
     </rect>
@@ -40,22 +40,6 @@
    </property>
    <property name="styleSheet">
     <string notr="true">background-image: url(:/elements/bars/Assets/bar_blue.png)</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>180</y>
-     <width>250</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255)</string>
-   </property>
-   <property name="text">
-    <string>Connect your Android Device through USB</string>
    </property>
   </widget>
   <widget class="QWidget" name="horizontalWidget" native="true">

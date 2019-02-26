@@ -2,6 +2,7 @@
 #define SETTINGSWINDOW_H
 
 #include <QWidget>
+#include <jsoncpp/json/json.h>
 
 namespace Ui {
 class SettingsWindow;
@@ -29,6 +30,8 @@ private slots:
 
 private:
     Ui::SettingsWindow *ui;
+    Json::Reader reader;
+    Json::Value root;
 };
 
 #endif // SETTINGSWINDOW_H

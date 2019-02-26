@@ -16,6 +16,7 @@ public:
     ~MainWindow();
 
 private slots:
+
     void on_button_close_clicked();
 
     void on_button_car_clicked();

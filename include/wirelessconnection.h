@@ -2,6 +2,7 @@
 #define WIRELESSCONNECTION_H
 
 #include <QWidget>
+#include <jsoncpp/json/json.h>
 
 namespace Ui {
 class WirelessConnection;
@@ -36,6 +37,8 @@ private slots:
 
 private:
     Ui::WirelessConnection *ui;
+    Json::Reader reader;
+    Json::Value root;
 };
 
 #endif // WIRELESSCONNECTION_H

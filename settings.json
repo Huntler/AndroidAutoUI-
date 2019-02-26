@@ -1,0 +1,13 @@
+{
+   "brightness" : 255,
+   "music libary" : [
+      {
+         "path" : "../Musik/"
+      }, 
+      {
+         "path" : "../Musik1/"
+      }
+   ],
+   "volume" : 100,
+   "wireless connection" : ""
+}

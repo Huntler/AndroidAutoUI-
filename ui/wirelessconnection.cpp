@@ -2,11 +2,9 @@
 #include "include/mainwindow.h"
 #include "ui_wirelessconnection.h"
 
-#include <sstream>
+#include <fstream>
 #include <iostream>
-
-QString _ip_address;
-int _ip_length = 0;
+#include <sstream>
 
 WirelessConnection::WirelessConnection(QWidget *parent) :
     QWidget(parent),
@@ -14,12 +12,12 @@ WirelessConnection::WirelessConnection(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // if there was a ip typed in, set it to the ui elements again
-    if (_ip_length > 0) {
-        ip_address = _ip_address;
-        ip_length = _ip_length;
-        ui->num_ip->setText(ip_address);
-    }
+    //read the json into a json object
+    std::ifstream file("settings.json");
+    reader.parse(file, root);
+
+    ui->num_ip->setText(QString::fromStdString(root["wireless connection"].asString()));
+
 }
 
 WirelessConnection::~WirelessConnection()
@@ -29,22 +27,23 @@ WirelessConnection::~WirelessConnection()
 
 void WirelessConnection::on_button_back_clicked()
 {
-    // save the current ip
-    _ip_address = ip_address;
-    _ip_length = ip_length;
     this->hide();
 }
 
 void WirelessConnection::on_button_ok_clicked()
 {
-    // clear the current ip
-    ip_address.clear();
-    ip_length = 0;
-    ui->num_ip->setText(ip_address);
+    // save the settings here
+    root["wireless connection"] = ip_address.toStdString();
+
+    // write the json back to the file
+    std::ofstream file_out("settings.json");
+    Json::StyledWriter styledWriter;
+    file_out << styledWriter.write(root);
+    file_out.close();
 }
 
 QString WirelessConnection::getIP(int n) {
-    // if the ip length is not over 12, add the number taht was clicked
+    // if the ip length is not over 12, add the number which was clicked
     if (ip_length != 12) {
         ip_address.append(QString::number(n));
         ip_length++;

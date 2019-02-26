@@ -419,7 +419,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(0, 143, 233)</string>
+    <string notr="true">color: rgb(255, 255, 255)</string>
    </property>
    <property name="lineWidth">
     <number>1</number>

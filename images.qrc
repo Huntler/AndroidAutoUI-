@@ -28,6 +28,7 @@
         <file>Assets/button_play_prev.png</file>
         <file>Assets/button_play_next.png</file>
         <file>Assets/button_play.png</file>
+        <file>Assets/button_shuffle.png</file>
     </qresource>
     <qresource prefix="/elements/icons">
         <file>Assets/ico_connect.png</file>
